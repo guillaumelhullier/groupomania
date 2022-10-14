@@ -24,6 +24,10 @@ const userSchema = new mongoose.Schema(
             max: 1024,
             minLength:6
         },
+        bio: {
+            type: String,
+            max : 1024
+        },
         likes:{
             type: [String]
         }
