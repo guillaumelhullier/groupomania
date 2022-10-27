@@ -9,7 +9,7 @@ module.exports.readPost = (req, res) => {
   }).sort({ created: -1 });
 };
 
-module.exports.createPost = async (req, res) => {
+module.exports.createPost = async (req, res) => { 
   const newPost = new PostModel({
     posterId: req.body.posterId,
     message: req.body.message,
