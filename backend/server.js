@@ -1,13 +1,17 @@
 //Import
 const express = require("express");
 const bodyParser = require("body-parser");
+const cors = require('cors');
 require("dotenv").config({ path: "./config/.env" });
 require("./config/db");
 const app = express();
 
+
 const indexRoute = require("./routes/index");
 const userRoutes = require("./routes/user.routes");
 const postRoutes = require("./routes/post.routes");
+
+app.use(cors());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

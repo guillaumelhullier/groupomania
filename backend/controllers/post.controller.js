@@ -1,6 +1,8 @@
 const PostModel = require("../models/post.model");
 const UserModel = require("../models/user.model");
+const { uploadErrors } = require("../utils/errors.utils");
 const ObjectID = require("mongoose").Types.ObjectId;
+const sharp = require("sharp");
 
 module.exports.readPost = (req, res) => {
   PostModel.find((err, docs) => {
@@ -9,14 +11,36 @@ module.exports.readPost = (req, res) => {
   }).sort({ created: -1 });
 };
 
-module.exports.createPost = async (req, res) => { 
+module.exports.createPost = async (req, res) => {
+  let fileName;
+  
+  if (req.file !== null) {
+    try {
+      if (
+        req.file.mimetype !== "image/jpg" &&
+        req.file.mimetype !== "image/png" &&
+        req.file.mimetype !== "image/jpeg"
+      )
+        throw Error("invalid file");
+
+      if (req.file.size > 500000) throw Error(" max size");
+    } catch (err) {
+      const errors = uploadErrors(err);
+      return res.status(201).json({ errors });
+    }
+    fileName = req.body.posterId + Date.now() + ".jpg";
+
+    await sharp(req.file.buffer)
+      .resize({ width: 150, height: 150 })
+      .toFile(`${__dirname}/../client/public/uploads/posts/${fileName}`);
+  }
   const newPost = new PostModel({
     posterId: req.body.posterId,
     message: req.body.message,
+    picture: req.file !== null ? "./uploads/posts/" + fileName : "",
     likers: [],
     comments: [],
   });
-
   try {
     const post = await newPost.save();
     return res.status(201).json(post);
@@ -24,7 +48,6 @@ module.exports.createPost = async (req, res) => {
     return res.status(400).send(err);
   }
 };
-
 module.exports.updatePost = (req, res) => {
   if (!ObjectID.isValid(req.params.id))
     return res.status(400).send("ID unknown : " + req.params.id);
@@ -32,7 +55,6 @@ module.exports.updatePost = (req, res) => {
   const updateRecord = {
     message: req.body.message,
   };
-
   PostModel.findByIdAndUpdate(
     req.params.id,
     { $set: updateRecord },
@@ -43,7 +65,6 @@ module.exports.updatePost = (req, res) => {
     }
   );
 };
-
 module.exports.deletePost = (req, res) => {
   if (!ObjectID.isValid(req.params.id))
     return res.status(400).send("ID unknown : " + req.params.id);
