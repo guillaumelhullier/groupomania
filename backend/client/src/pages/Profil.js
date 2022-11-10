@@ -1,18 +1,11 @@
-import React from "react";
-import Log from "../components/Log";
-import logo from "../assets/logo1.png";
+import React from 'react';
 
 const Profil = () => {
-  return (
-    <div className="profil-page">
-      <div className="log-container">
-        <Log signin={false} signup= {true}/>
-        <div className="img-container">
-          <img src={logo} alt="img-log" />
+    return (
+        <div>
+            Voici le profil
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Profil;
