@@ -4,9 +4,9 @@ import SignInForm from "./SignInForm";
 
 // Connection-Inscription
 
-const Log = () => {
-  const [signUpModal, setsignUpModal] = useState(true);
-  const [signInModal, setsignInModal] = useState(false);
+const Log = (props) => {
+  const [signUpModal, setsignUpModal] = useState(props.signup);
+  const [signInModal, setsignInModal] = useState(props.signin);
 
   const handleModals = (e) => {
     if (e.target.id === "register") {
