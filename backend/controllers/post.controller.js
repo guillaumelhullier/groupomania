@@ -1,4 +1,5 @@
 const PostModel = require("../models/post.model");
+const postModel = require("../models/post.model");
 const UserModel = require("../models/user.model");
 const { uploadErrors } = require("../utils/errors.utils");
 const ObjectID = require("mongoose").Types.ObjectId;
@@ -13,7 +14,7 @@ module.exports.readPost = (req, res) => {
 
 module.exports.createPost = async (req, res) => {
   let fileName;
-  
+
   if (req.file !== null) {
     try {
       if (
@@ -23,7 +24,7 @@ module.exports.createPost = async (req, res) => {
       )
         throw Error("invalid file");
 
-      if (req.file.size > 500000) throw Error(" max size");
+      if (req.file.size > 500000) throw Error("max size");
     } catch (err) {
       const errors = uploadErrors(err);
       return res.status(201).json({ errors });
@@ -34,7 +35,7 @@ module.exports.createPost = async (req, res) => {
       .resize({ width: 150, height: 150 })
       .toFile(`${__dirname}/../client/public/uploads/posts/${fileName}`);
   }
-  const newPost = new PostModel({
+  const newPost = new postModel({
     posterId: req.body.posterId,
     message: req.body.message,
     picture: req.file !== null ? "./uploads/posts/" + fileName : "",
@@ -48,6 +49,7 @@ module.exports.createPost = async (req, res) => {
     return res.status(400).send(err);
   }
 };
+
 module.exports.updatePost = (req, res) => {
   if (!ObjectID.isValid(req.params.id))
     return res.status(400).send("ID unknown : " + req.params.id);

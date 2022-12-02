@@ -27,8 +27,8 @@ const App = () => {
     fetchToken();
 
     if (uid) dispatch(getUser(uid));
-    // eslint-disable-next-line
-  }, [uid]);
+    
+  }, [uid,dispatch]);
 
   return (
     <UidContext.Provider value={uid}>

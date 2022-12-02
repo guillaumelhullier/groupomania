@@ -1,10 +1,11 @@
 const UserModel = require("../models/user.model");
 const { uploadErrors } = require("../utils/errors.utils");
 const sharp = require("sharp");
-const { Error } = require("mongoose");
+/*const { Error } = require("mongoose");*/
 
 module.exports.uploadProfil = async (req, res) => {
   const fileName = req.body.name + ".jpg";
+
   try {
     if (
       req.file.mimetype !== "image/jpg" &&
@@ -18,6 +19,7 @@ module.exports.uploadProfil = async (req, res) => {
     const errors = uploadErrors(err);
     return res.status(201).json({ errors });
   }
+
   await sharp(req.file.buffer)
     .resize({ width: 150, height: 150 })
     .toFile(`${__dirname}/../client/public/uploads/profil/${fileName}`);
