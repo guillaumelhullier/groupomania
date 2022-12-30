@@ -1,0 +1,171 @@
+.profil-container {
+  display: flex;
+  position: relative;
+}
+@media screen and (max-width: 500px) {
+  .profil-container .left-nav-container {
+    width: 20%;
+  }
+}
+.profil-container .left-nav-container .icons {
+  width: 100%;
+}
+.profil-container .left-nav-container .icons .icons-bis {
+  width: 100%;
+}
+.profil-container .left-nav-container .icons .icons-bis .homeicon {
+  width: 100%;
+}
+.profil-container .left-nav-container .icons .icons-bis .rocketicon {
+  width: 100%;
+}
+.profil-container .left-nav-container .icons .icons-bis .usericon {
+  width: 100%;
+}
+.profil-container .popup-profil-container {
+  border-color: black;
+  border-style: solid;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #fc2f40, #FFD7D7);
+  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 200px;
+  height: 300px;
+  width: 30%;
+}
+.profil-container .popup-profil-container .modal .modal-popup {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+.profil-container .popup-profil-container .modal .modal-popup .cross {
+  cursor: pointer;
+}
+.profil-container .popup-profil-container .modal img {
+  width: 10%;
+}
+.profil-container .popup-profil-container .modal .unfollow-btn {
+  border-color: black;
+  border-style: solid;
+  border-radius: 10px;
+  background-color: #FD2D01;
+  cursor: pointer;
+}
+.profil-container .popup-profil-container .modal .check {
+  margin-left: 50px;
+  width: 10%;
+  cursor: pointer;
+}
+.profil-container .popup-profil-container .modal .checked {
+  cursor: pointer;
+  margin-left: 100px;
+}
+
+.userprofil {
+  position: absolute;
+  top: -30px;
+}
+
+.update-container {
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 500px) {
+  .update-container {
+    width: 50%;
+    margin-left: 50px;
+  }
+}
+.update-container .left-part {
+  border-color: black;
+  border-style: solid;
+  width: 45%;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #fc2f40, #FFD7D7);
+  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 500px) {
+  .update-container .left-part {
+    width: 150%;
+  }
+}
+.update-container .left-part h4 {
+  text-align: center;
+}
+.update-container .left-part img {
+  width: 100%;
+}
+.update-container .left-part .upload-pic {
+  position: relative;
+}
+.update-container .left-part .upload-pic label[for=file] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FD2D01;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.update-container .left-part .upload-pic input[type=file] {
+  width: 100%;
+  position: absolute;
+  left: -600px;
+}
+.update-container .left-part .upload-pic input[type=submit] {
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #FD2D01;
+  border-radius: 10px;
+  height: 30px;
+  cursor: pointer;
+}
+.update-container .right-part {
+  border-color: black;
+  border-style: solid;
+  border-radius: 10px;
+  width: 45%;
+  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(90deg, #fc2f40, #FFD7D7);
+}
+@media screen and (max-width: 500px) {
+  .update-container .right-part {
+    position: absolute;
+    top: -600px;
+  }
+}
+.update-container .right-part .bio-update h3 {
+  text-align: center;
+  font-size: larger;
+  margin-bottom: 10px;
+}
+.update-container .right-part .bio-update textarea {
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.update-container .right-part .bio-update button {
+  width: 80%;
+  margin: auto;
+  min-height: 40px;
+  margin-top: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  background-color: #FD2D01;
+  justify-content: center;
+  cursor: pointer;
+}
+.update-container .right-part h4 {
+  margin-top: 30px;
+  text-align: center;
+}
+.update-container .right-part h5 {
+  margin-top: 20px;
+  text-align: center;
+  cursor: pointer;
+}/*# sourceMappingURL=cardcomments.css.map */

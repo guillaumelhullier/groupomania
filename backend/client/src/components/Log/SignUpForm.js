@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import SignInForm from "./SignInForm";
+ 
 
 // Formulaire d'inscription
 
@@ -120,7 +121,7 @@ const SignUpForm = () => {
           </label>
           <div className="terms error"></div>
           <br />
-          <input type="submit" value="Valider inscription" />
+          <input type="submit" value="Valider inscription" className="inputvalid" />
         </form>
       )}
     </>

@@ -7,6 +7,7 @@ import NewPostForm from "../components/Post/NewPostForm";
 import Log from "../components/Log";
 import Trends from "../components/Trends";
 import FriendsHint from "../components/Profil/FriendsHint";
+import "../styles/home.scss"
 
 const Home = () => {
   const uid = useContext(UidContext);

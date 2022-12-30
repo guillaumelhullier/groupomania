@@ -3,6 +3,10 @@ import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { UidContext } from "./AppContext";
 import Logout from "./Log/Logout";
+import logo from "./assets/IconNav.png";
+import login from "./assets/login.png";
+
+import "../styles/navbar.scss";
 
 const Navbar = () => {
   const uid = useContext(UidContext);
@@ -14,13 +18,17 @@ const Navbar = () => {
         <div className="logo">
           <NavLink exact to="/">
             <div className="logo">
-              <h4>Mettre logo du site sur Navbar</h4>
-              <h5>Groupomania</h5>
+              <img
+                src={logo}
+                alt="Logo Groupomania"
+                className="logo-groupomania"
+              />
+              <h3 className="groupomania">GROUPOMANIA</h3>
             </div>
           </NavLink>
         </div>
         {uid ? (
-          <ul>
+          <ul className="navbar">
             <li></li>
             <li className="welcome">
               <NavLink exact to="/profil">
@@ -30,11 +38,11 @@ const Navbar = () => {
             <Logout />
           </ul>
         ) : (
-          <ul>
+          <ul className="navbar">
             <li></li>
             <li>
               <NavLink exact to="/profil">
-                <h4>Mettre logo login dans Navbar</h4>
+                <img src={login} alt="login" className="login-groupomania" />
               </NavLink>
             </li>
           </ul>

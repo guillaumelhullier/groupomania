@@ -1,0 +1,210 @@
+.profil-page {
+    border-color: black;
+    border-style: solid;
+    margin-top: 60px;
+    width: 100%;
+
+    .log-container {
+        display: flex;
+        justify-content: space-between;
+        min-height: 350px;
+
+        @media screen and (max-width:350px) {
+            justify-content: center;
+        }
+
+        .connection-form {
+            border-color: black;
+            border-style: solid;
+            margin: 5px;
+            width: 55%;
+            min-width: 175px;
+            position: relative;
+            background: linear-gradient(90deg, #fc2f40, #FFD7D7);
+            border-radius: 20px;
+
+            @media screen and (max-width:350px) {
+                width: 70%;
+            }
+
+            .form-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-top: 20px;
+
+
+
+                @media screen and (max-width:350px) {
+                    width: 100%;
+                }
+
+
+                ul {
+
+
+                    li {
+                        cursor: pointer;
+                        border-radius: 20px;
+                        padding: 10px 20px;
+                        transition: 0.2s;
+                    }
+                }
+
+                label {
+
+                    width: 270px;
+                    color: maroon;
+                    border-radius: 20px;
+                    padding: 9px 0;
+                    transition: 0.2s;
+                    margin-top: 30px;
+                    cursor: pointer;
+                }
+
+                label[for="terms"] {
+                    margin-left: 10px;
+                    padding-top: 0px;
+                }
+
+
+                input[type="checkbox"] {
+                    width: 5%;
+                }
+
+                .pseudo.error {
+                    color: red;
+                    font-size: 1em;
+                }
+
+                .email.error {
+                    color: red;
+                    font-size: 1em;
+                }
+
+                .password.error {
+                    color: red;
+                    font-size: 1em;
+                }
+
+                .password-confirm.error {
+                    color: red;
+                    font-size: 1em;
+                }
+
+                .terms.error {
+                    color: red;
+                    font-size: 1em;
+                }
+
+                .active-btn {
+                    text-align: center;
+                }
+
+                li:not(.active-btn) {
+                    background-color: #FD2D01;
+                    text-align: center;
+                    width: 80%;
+                    margin: auto;
+
+
+
+                    &:hover {
+                        background: #FFD7D7;
+                    }
+                }
+
+                .inputvalid {
+
+
+                    background-color: #FD2D01;
+                    border-radius: 20px;
+                    margin: auto;
+                    text-align: center;
+                    height: 40px;
+                    width: 100%;
+                    margin-bottom: 10px;
+
+
+                    &:hover {
+                        background: #FFD7D7;
+                    }
+
+
+                }
+
+                #sign-up-form {
+                    margin-top: 20px;
+
+                    inputvalid {
+                        width: 60%;
+                        margin: auto;
+
+                        :-ms-input-placeholder {
+                            /* Internet Explorer 10-11 */
+                            color: #909;
+                        }
+
+                    }
+
+                    .connecter {
+                        width: 100%;
+                        background-color: #FD2D01;
+                        border-radius: 20px;
+                        height: 30px;
+
+
+                    }
+                }
+            }
+
+            form {
+                input {
+                    border-radius: 20px;
+                    margin: auto;
+                    text-align: center;
+                    height: 40px;
+                    width: 100%;
+                }
+
+                input[type="submit"] {
+                    margin-top: 10px;
+                    border-radius: 20px;
+                    
+
+                    &:hover {
+                        letter-spacing: 1px;
+                    }
+                }
+
+            }
+
+        }
+
+        .img-container {
+            border-color: black;
+            border-style: solid;
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin-right: 5px;
+            background: linear-gradient(90deg, #fc2f40, #FFD7D7);
+            border-radius: 20px;
+
+            @media screen and (max-width:350px) {
+                position: relative;
+                top: -700px;
+                width: 0%;
+
+            }
+
+            .photoprofil {
+                width: 100%;
+
+            }
+        }
+    }
+
+}

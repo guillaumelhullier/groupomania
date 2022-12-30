@@ -1,0 +1,212 @@
+.profil-container {
+    display: flex;
+    position: relative;
+
+    .left-nav-container{    
+        
+        @media screen and (max-width:500px) {
+            width: 20%
+        }
+
+        .icons{
+            width: 100%;
+            .icons-bis{
+                width: 100%;
+                .homeicon{
+                    width: 100%;
+                }
+                .rocketicon{
+                    width: 100%;
+                }
+                .usericon{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+
+    .popup-profil-container {
+        border-color: black;
+        border-style: solid;
+        border-radius: 10px;
+        background: linear-gradient(90deg, #fc2f40, #FFD7D7);
+        box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+        position: absolute;
+        left: 200px;
+        height: 300px;
+        width: 30%;
+
+        .modal {
+            .modal-popup {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 20px;
+                padding-left: 10px;
+
+                .cross {
+                    cursor: pointer;
+                }
+            }
+
+            img {
+                width: 10%;
+            }
+
+
+            .unfollow-btn {
+                border-color: black;
+                border-style: solid;
+                border-radius: 10px;
+                background-color: #FD2D01;
+                cursor: pointer;
+            }
+
+            .check {
+                margin-left: 50px;
+                width: 10%;
+                cursor: pointer;
+            }
+
+            .checked {
+                cursor: pointer;
+                margin-left: 100px;
+            }
+
+        }
+    }
+}
+
+
+.userprofil {
+    position: absolute;
+    top: -30px;
+}
+
+
+.update-container {
+
+
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width:500px) {
+        width: 50%;
+        margin-left: 50px;
+    }
+
+    .left-part {
+        border-color: black;
+        border-style: solid;
+        width: 45%;
+        border-radius: 10px;
+        background: linear-gradient(90deg, #fc2f40, #FFD7D7);
+        box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+
+        @media screen and (max-width:500px) {
+            width: 150%;
+        }
+
+        h4 {
+            text-align: center;
+
+        }
+
+
+        img {
+            width: 100%;
+        }
+
+        .upload-pic {
+
+            position: relative;
+
+            label[for="file"] {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #FD2D01;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+
+
+            input[type="file"] {
+                width: 100%;
+                position: absolute;
+                left: -600px;
+            }
+
+            input[type="submit"] {
+                width: 100%;
+                margin-bottom: 10px;
+                background-color: #FD2D01;
+                border-radius: 10px;
+                height: 30px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .right-part {
+        border-color: black;
+        border-style: solid;
+        border-radius: 10px;
+        width: 45%;
+        box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+        background: linear-gradient(90deg, #fc2f40, #FFD7D7);
+
+        @media screen and (max-width:500px) {
+            position: absolute;
+            top: -600px;
+        }
+
+
+        .bio-update {
+            h3 {
+                text-align: center;
+                font-size: larger;
+                margin-bottom: 10px;
+            }
+
+            textarea {
+                width: 90%;
+                margin: auto;
+                border-radius: 10px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+            }
+
+            button {
+                width: 80%;
+                margin: auto;
+                min-height: 40px;
+                margin-top: 20px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                background-color: #FD2D01;
+                justify-content: center;
+                cursor: pointer;
+
+            }
+
+        }
+
+        h4 {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        h5 {
+            margin-top: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+    }
+
+
+}

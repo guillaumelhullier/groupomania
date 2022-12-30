@@ -25,7 +25,7 @@ const UpdateProfil = () => {
   return (
     <div className="profil-container">
       <LeftNav />
-      <h4>Profil de {userData.pseudo}</h4>
+      <h2 className="userprofil">Profil de {userData.pseudo}</h2>
       <div className="update-container">
         <div className="left-part">
           <h4>Photo de Profil</h4>
@@ -68,10 +68,12 @@ const UpdateProfil = () => {
       {followingPopup && (
         <div className="popup-profil-container">
           <div className="modal">
-            <h3>Abonnements</h3>
-            <span className="cross" onClick={() => setFollowingPopup(false)}>
-              &#10005;
-            </span>
+            <div className="modal-popup">
+              <h3>Abonnements</h3>
+              <span className="cross" onClick={() => setFollowingPopup(false)}>
+                &#10005;
+              </span>
+            </div>
             <ul>
               {usersData.map((user) => {
                 for (let i = 0; i < userData.following.length; i++) {
@@ -99,10 +101,12 @@ const UpdateProfil = () => {
       {followersPopup && (
         <div className="popup-profil-container">
           <div className="modal">
-            <h3>Abonnés</h3>
-            <span className="cross" onClick={() => setFollowersPopup(false)}>
-              &#10005;
-            </span>
+            <div className="modal-popup">
+              <h3>Abonnés</h3>
+              <span className="cross" onClick={() => setFollowersPopup(false)}>
+                &#10005;
+              </span>
+            </div>
             <ul>
               {usersData.map((user) => {
                 for (let i = 0; i < userData.followers.length; i++) {

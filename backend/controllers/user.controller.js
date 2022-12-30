@@ -4,7 +4,7 @@ const ObjectID = require("mongoose").Types.ObjectId;
 //Logique get all
 
 module.exports.getAllUsers = async (req, res) => {
-  const users = await UserModel.find().select();
+  const users = await UserModel.find().select('-password');
   res.status(200).json(users);
 };
 
@@ -18,7 +18,7 @@ module.exports.userInfo = (req, res) => {
   UserModel.findById(req.params.id, (err, docs) => {
     if (!err) res.send(docs);
     else console.log("ID unknown :" + err);
-  });
+  }).select("-password");
 };
 
 module.exports.updateUser = async (req, res) => {

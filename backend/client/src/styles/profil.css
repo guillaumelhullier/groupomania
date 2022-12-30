@@ -1,0 +1,161 @@
+.profil-page {
+  border-color: black;
+  border-style: solid;
+  margin-top: 60px;
+  width: 100%;
+}
+.profil-page .log-container {
+  display: flex;
+  justify-content: space-between;
+  min-height: 350px;
+}
+@media screen and (max-width: 350px) {
+  .profil-page .log-container {
+    justify-content: center;
+  }
+}
+.profil-page .log-container .connection-form {
+  border-color: black;
+  border-style: solid;
+  margin: 5px;
+  width: 55%;
+  min-width: 175px;
+  position: relative;
+  background: linear-gradient(90deg, #fc2f40, #FFD7D7);
+  border-radius: 20px;
+}
+@media screen and (max-width: 350px) {
+  .profil-page .log-container .connection-form {
+    width: 70%;
+  }
+}
+.profil-page .log-container .connection-form .form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+}
+@media screen and (max-width: 350px) {
+  .profil-page .log-container .connection-form .form-container {
+    width: 100%;
+  }
+}
+.profil-page .log-container .connection-form .form-container ul li {
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 10px 20px;
+  transition: 0.2s;
+}
+.profil-page .log-container .connection-form .form-container label {
+  width: 270px;
+  color: maroon;
+  border-radius: 20px;
+  padding: 9px 0;
+  transition: 0.2s;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.profil-page .log-container .connection-form .form-container label[for=terms] {
+  margin-left: 10px;
+  padding-top: 0px;
+}
+.profil-page .log-container .connection-form .form-container input[type=checkbox] {
+  width: 5%;
+}
+.profil-page .log-container .connection-form .form-container .pseudo.error {
+  color: red;
+  font-size: 1em;
+}
+.profil-page .log-container .connection-form .form-container .email.error {
+  color: red;
+  font-size: 1em;
+}
+.profil-page .log-container .connection-form .form-container .password.error {
+  color: red;
+  font-size: 1em;
+}
+.profil-page .log-container .connection-form .form-container .password-confirm.error {
+  color: red;
+  font-size: 1em;
+}
+.profil-page .log-container .connection-form .form-container .terms.error {
+  color: red;
+  font-size: 1em;
+}
+.profil-page .log-container .connection-form .form-container .active-btn {
+  text-align: center;
+}
+.profil-page .log-container .connection-form .form-container li:not(.active-btn) {
+  background-color: #FD2D01;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+.profil-page .log-container .connection-form .form-container li:not(.active-btn):hover {
+  background: #FFD7D7;
+}
+.profil-page .log-container .connection-form .form-container .inputvalid {
+  background-color: #FD2D01;
+  border-radius: 20px;
+  margin: auto;
+  text-align: center;
+  height: 40px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.profil-page .log-container .connection-form .form-container .inputvalid:hover {
+  background: #FFD7D7;
+}
+.profil-page .log-container .connection-form .form-container #sign-up-form {
+  margin-top: 20px;
+}
+.profil-page .log-container .connection-form .form-container #sign-up-form inputvalid {
+  width: 60%;
+  margin: auto;
+}
+.profil-page .log-container .connection-form .form-container #sign-up-form inputvalid :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #909;
+}
+.profil-page .log-container .connection-form .form-container #sign-up-form .connecter {
+  width: 100%;
+  background-color: #FD2D01;
+  border-radius: 20px;
+  height: 30px;
+}
+.profil-page .log-container .connection-form form input {
+  border-radius: 20px;
+  margin: auto;
+  text-align: center;
+  height: 40px;
+  width: 100%;
+}
+.profil-page .log-container .connection-form form input[type=submit] {
+  margin-top: 10px;
+  border-radius: 20px;
+}
+.profil-page .log-container .connection-form form input[type=submit]:hover {
+  letter-spacing: 1px;
+}
+.profil-page .log-container .img-container {
+  border-color: black;
+  border-style: solid;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-right: 5px;
+  background: linear-gradient(90deg, #fc2f40, #FFD7D7);
+  border-radius: 20px;
+}
+@media screen and (max-width: 350px) {
+  .profil-page .log-container .img-container {
+    position: relative;
+    top: -700px;
+    width: 0%;
+  }
+}
+.profil-page .log-container .img-container .photoprofil {
+  width: 100%;
+}/*# sourceMappingURL=profil.css.map */

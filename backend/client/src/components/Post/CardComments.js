@@ -5,6 +5,7 @@ import FollowHandler from "../Profil/FollowHandler";
 import { isEmpty, timestampParser } from "../Utils";
 import EditDeleteComment from "./EditDeleteComment";
 
+
 const CardComments = ({ post }) => {
   const [text, setText] = useState("");
   const usersData = useSelector((state) => state.usersReducer);

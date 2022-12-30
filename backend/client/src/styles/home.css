@@ -1,0 +1,109 @@
+.home {
+  margin-top: 50px;
+  border-top-color: black;
+  border-style: solid;
+  margin-left: 5px;
+}
+
+.home-header {
+  border: 2px;
+  border-color: black;
+  border-style: solid;
+  width: 40%;
+  min-width: 135px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #fc2f40, #FFD7D7);
+}
+.home-header .post-container .data {
+  text-align: center;
+}
+.home-header .post-container .user-img {
+  width: 100%;
+  border-radius: 10px;
+}
+.home-header .post-container .post-form {
+  width: 100%;
+  border-radius: 20px;
+}
+.home-header .post-container .post-form .textarea {
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+}
+.home-header .post-container .post-form .card-container .userpic {
+  width: 100%;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+}
+@media screen and (max-width: 350px) {
+  .form-container {
+    width: 100%;
+  }
+}
+.form-container ul li {
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 10px 20px;
+  transition: 0.2s;
+}
+.form-container label {
+  width: 270px;
+  color: maroon;
+  border-radius: 20px;
+  padding: 9px 0;
+  transition: 0.2s;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.form-container input {
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+}
+.form-container input[type=submit] {
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 10px 20px;
+  transition: 0.2s;
+  background-color: #FD2D01;
+}
+.form-container input[type=submit]:hover {
+  letter-spacing: 1px;
+}
+.form-container .pseudo.error {
+  color: red;
+  font-size: 1em;
+}
+.form-container .email.error {
+  color: red;
+  font-size: 1em;
+}
+.form-container .password.error {
+  color: red;
+  font-size: 1em;
+}
+.form-container .password-confirm.error {
+  color: red;
+  font-size: 1em;
+}
+.form-container .terms.error {
+  color: red;
+  font-size: 1em;
+}
+.form-container .active-btn {
+  text-align: center;
+}
+.form-container li:not(.active-btn) {
+  background-color: #FD2D01;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+.form-container li:not(.active-btn):hover {
+  background: #FFD7D7;
+}/*# sourceMappingURL=home.css.map */

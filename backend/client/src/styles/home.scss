@@ -1,0 +1,143 @@
+.home {
+    margin-top: 50px;
+    border-top-color: black;
+    border-style: solid;
+    margin-left: 5px;
+}
+
+.home-header {
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+    width: 40%;
+    min-width: 135px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #fc2f40, #FFD7D7);
+
+    .post-container {
+        .data {
+            text-align: center;
+        }
+
+        .user-img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .post-form {
+            width: 100%;
+            border-radius: 20px;
+
+            .textarea {
+                width: 100%;
+                border-radius: 10px;
+                text-align: center;
+            }
+
+            .card-container {
+
+                .userpic {
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+}
+
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+
+
+
+    @media screen and (max-width:350px) {
+        width: 100%;
+    }
+
+
+    ul {
+
+
+        li {
+            cursor: pointer;
+            border-radius: 20px;
+            padding: 10px 20px;
+            transition: 0.2s;
+        }
+    }
+
+    label {
+
+        width: 270px;
+        color: maroon;
+        border-radius: 20px;
+        padding: 9px 0;
+        transition: 0.2s;
+        margin-top: 30px;
+        cursor: pointer;
+    }
+
+    input {
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    input[type="submit"] {
+        cursor: pointer;
+        border-radius: 20px;
+        padding: 10px 20px;
+        transition: 0.2s;
+        background-color: #FD2D01;
+
+        &:hover {
+            letter-spacing: 1px;
+        }
+    }
+
+
+
+    .pseudo.error {
+        color: red;
+        font-size: 1em;
+    }
+
+    .email.error {
+        color: red;
+        font-size: 1em;
+    }
+
+    .password.error {
+        color: red;
+        font-size: 1em;
+    }
+
+    .password-confirm.error {
+        color: red;
+        font-size: 1em;
+    }
+
+    .terms.error {
+        color: red;
+        font-size: 1em;
+    }
+
+    .active-btn {
+        text-align: center;
+    }
+
+    li:not(.active-btn) {
+        background-color: #FD2D01;
+        text-align: center;
+        width: 80%;
+        margin: auto;
+
+        &:hover {
+            background: #FFD7D7;
+        }
+    }
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import cookie from "js-cookie";
+import login from "../assets/logout.png";
 
 const Logout = () => {
   const removeCookie = (key) => {
@@ -23,7 +24,7 @@ const Logout = () => {
 
   return (
     <li onClick={logout}>
-      <h5>Mette icone logout</h5>
+      <img src={login} alt="logout" />
     </li>
   );
 };

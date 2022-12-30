@@ -1,5 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "../styles/leftnav.scss";
+import home from "../components/assets/home .png"
+import rocket from "../components/assets/rocket .png";
+import user from "../components/assets/user .png";
 
 const LeftNav = () => {
   return (
@@ -7,15 +11,15 @@ const LeftNav = () => {
       <div className="icons">
         <div className="icons-bis">
           <NavLink to="/" exact activeClassName="active-left-nav">
-            <h5>Mettre icone maison acceuil LeftNav</h5>
+            <img src={home} alt="home" className="homeicon" />
           </NavLink>
           <br />
           <NavLink to="/trending" exact activeClassName="active-left-nav">
-            <h5>Mettre icone roquette LeftNav</h5>
+            <img src={rocket} alt="rocket" className="rocketicon"/>           
           </NavLink>
           <br />
           <NavLink to="/ profil" exact activeClassName="active-left-nav">
-            <h5>Mettre icone user LeftNav</h5>
+            <img src={user} alt="user" className="usericon"/>           
           </NavLink>
         </div>
       </div>
